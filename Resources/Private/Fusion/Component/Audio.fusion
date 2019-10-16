@@ -14,7 +14,7 @@ prototype(Jonnitto.PrettyEmbedAudio:Component.Audio) < prototype(Neos.Fusion:Com
     sources = null
 
     renderer = afx`
-        <div class={BEM.string('jonnitto-prettyembed', null, {audio: true, autoplay: props.autoplay})}>
+        <div class={BEM.modifier('jonnitto-prettyembed', 'audio')}>
             <audio
                 id={props.id}
                 controls={props.controls}
