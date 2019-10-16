@@ -20,6 +20,12 @@
             "email": "info@unikka.de",
             "homepage": "https://unikka.de",
             "role": "Developer"
+        },
+        {
+            "name": "Jon Uhlmann",
+            "email": "me@jonnitto.ch",
+            "homepage": "https://jonnitto.ch",
+            "role": "Developer"
         }
     ],
     "require": {
