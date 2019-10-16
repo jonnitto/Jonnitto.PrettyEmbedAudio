@@ -9,17 +9,31 @@ prototype(Jonnitto.PrettyEmbedAudio:Content.Audio) < prototype(Jonnitto.PrettyEm
     externalWave = ${q(node).property('externalWave')}
     externalOgg = ${q(node).property('externalOgg')}
 
-    autopause = Jonnitto.PrettyEmbedHelper:GetProperty {
-        property = 'autopause'
+    # This enumerated attribute is intended to provide a hint to the browser about what
+    # the author thinks will lead to the best user experience with regards to what content
+    # is loaded before the video is played. It may have one of the following values:
+    #  - none       Indicates that the video should not be preloaded.
+    #  - metadata   Indicates that only video metadata (e.g. length) is fetched.
+    #  - auto       Indicates that the whole video file can be downloaded, even if the user is not expected to use it
+    preload = Jonnitto.PrettyEmbedHelper:GetProperty {
+        property = 'preload'
     }
-    color = Jonnitto.PrettyEmbedHelper:GetProperty {
-        property = 'color'
+
+    # https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio#attr-crossorigin
+    crossorigin = Jonnitto.PrettyEmbedHelper:GetProperty {
+        property = 'crossorigin'
     }
-    background = Jonnitto.PrettyEmbedHelper:GetProperty {
-        property = 'background'
+
+    # If true, the browser will offer controls to allow the user to control
+    # audio playback, including volume, seeking, and pause/resume playback.
+    controls = Jonnitto.PrettyEmbedHelper:GetProperty {
+        property = 'controls'
     }
-    transparent = Jonnitto.PrettyEmbedHelper:GetProperty {
-        property = 'transparent'
+
+    # If true, the browser will automatically seek back
+    # to the start upon reaching the end of the audio.
+    loop = Jonnitto.PrettyEmbedHelper:GetProperty {
+        property = 'loop'
     }
 
     renderer = Neos.Fusion:Component {
@@ -37,6 +51,7 @@ prototype(Jonnitto.PrettyEmbedAudio:Content.Audio) < prototype(Jonnitto.PrettyEm
                         }
                     }
                 }
+
                 external = Neos.Fusion:Loop {
                     items = Neos.Fusion:DataStructure {
                         mp3 = ${Type.isString(props.externalMp3) ? String.trim(props.externalMp3) : null}
@@ -65,9 +80,7 @@ prototype(Jonnitto.PrettyEmbedAudio:Content.Audio) < prototype(Jonnitto.PrettyEm
             }
             default {
                 condition = true
-                renderer = afx`
-                    <Jonnitto.PrettyEmbedAudio:Component.Audio {...props} />
-                `
+                renderer = afx`<Jonnitto.PrettyEmbedAudio:Component.Audio {...props} />`
             }
         }
     }
