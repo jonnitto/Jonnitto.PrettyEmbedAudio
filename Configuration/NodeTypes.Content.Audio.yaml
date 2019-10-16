@@ -1,0 +1,16 @@
+'Jonnitto.PrettyEmbedAudio:Content.Audio':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Jonnitto.PrettyEmbedHelper:Mixin.Groups': true
+    'Jonnitto.PrettyEmbedHelper:Mixin.IncludeAssets': true
+    'Jonnitto.PrettyEmbedAudio:Mixin.Sources': true
+
+    # If you want to give the editor more control,
+    # you can also add also these mixins:
+
+    # 'Jonnitto.PrettyEmbedHelper:Mixin.Muted': true
+    # 'Jonnitto.PrettyEmbedHelper:Mixin.Loop': true
+  ui:
+    label: Audio
+    icon: 'fas fa-microphone'
+    position: 920

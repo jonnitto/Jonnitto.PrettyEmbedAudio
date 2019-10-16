@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2"
+    xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="Jonnitto.PrettyEmbedAudio" source-language="en" target-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="properties.externalMp3" xml:space="preserve">
+                <source>MP3 audio sources</source>
+                <target>MP3 Audio Quellen</target>
+            </trans-unit>
+            <trans-unit id="properties.externalWave" xml:space="preserve">
+                <source>Wave audio sources</source>
+                <target>Wave Audio Quellen</target>
+            </trans-unit>
+            <trans-unit id="properties.externalOgg" xml:space="preserve">
+                <source>Ogg audio sources</source>
+                <target>Ogg Audio Quellen</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

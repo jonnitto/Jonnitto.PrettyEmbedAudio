@@ -1,0 +1,37 @@
+prototype(Jonnitto.PrettyEmbedAudio:Component.Audio) < prototype(Neos.Fusion:Component) {
+    configuration = ${Configuration.setting('Jonnitto.PrettyEmbedAudio')}
+
+    controls = ${this.configuration.defaults.controls}
+    loop = ${this.configuration.defaults.loop}
+    muted = ${this.configuration.defaults.muted}
+    preload = ${this.configuration.defaults.preload}
+    playsinline = ${this.configuration.defaults.playsinline}
+    crossorigin = ${this.configuration.defaults.crossorigin}
+
+    wrapper = ${Configuration.setting('Jonnitto.PrettyEmbedHelper.wrapper')}
+
+    width = null
+    height = null
+
+    id = null
+
+    sources = null
+
+    renderer = afx`
+        <div class={BEM.string('jonnitto-prettyembed', null, {audio: true, autoplay: props.autoplay})}>
+            <audio
+                id={props.id}
+                controls={props.controls}
+                loop={props.loop}
+                preload={props.preload}
+                playsinline={props.playsinline}
+                crossorigin={props.crossorigin}
+            >
+                {props.sources}
+            </audio>
+        </div>
+    `
+    renderer.@process.wrapper = Jonnitto.PrettyEmbedHelper:Wrapper {
+        wrapper = ${props.wrapper}
+    }
+}

@@ -1,0 +1,30 @@
+'Jonnitto.PrettyEmbedAudio:Mixin.Sources':
+  superTypes:
+    'Jonnitto.PrettyEmbedAudio:Mixin.Assets': true
+    'Jonnitto.PrettyEmbedAudio:Mixin.ExternalSources': true
+  abstract: true
+  properties:
+    external:
+      type: boolean
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: audio
+          position: 10
+    assets:
+      ui:
+        inspector:
+          hidden: 'ClientEval:node.properties.external'
+    externalMp3:
+      ui:
+        inspector:
+          hidden: 'ClientEval:node.properties.external ? false : true'
+    externalWave:
+      ui:
+        inspector:
+          hidden: 'ClientEval:node.properties.external ? false : true'
+    externalOgg:
+      ui:
+        inspector:
+          hidden: 'ClientEval:node.properties.external ? false : true'

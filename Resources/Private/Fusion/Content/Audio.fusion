@@ -1,0 +1,74 @@
+prototype(Jonnitto.PrettyEmbedAudio:Content.Audio) < prototype(Jonnitto.PrettyEmbedHelper:Content) {
+    package = 'Audio'
+    audioFileTypes = ${['mp3', 'wave', 'ogg']}
+
+    assets = ${q(node).property('assets')}
+    hasExternalSwitch = ${q(node).is('[instanceof Jonnitto.PrettyEmbedAudio:Mixin.Sources]')}
+    external = ${q(node).property('external')}
+    externalMp3 = ${q(node).property('externalMp3')}
+    externalWave = ${q(node).property('externalWave')}
+    externalOgg = ${q(node).property('externalOgg')}
+
+    autopause = Jonnitto.PrettyEmbedHelper:GetProperty {
+        property = 'autopause'
+    }
+    color = Jonnitto.PrettyEmbedHelper:GetProperty {
+        property = 'color'
+    }
+    background = Jonnitto.PrettyEmbedHelper:GetProperty {
+        property = 'background'
+    }
+    transparent = Jonnitto.PrettyEmbedHelper:GetProperty {
+        property = 'transparent'
+    }
+
+    renderer = Neos.Fusion:Component {
+        @apply {
+            props = ${props}
+            overwrite = Neos.Fusion:DataStructure {
+                assets = Neos.Fusion:Loop {
+                    items = ${props.audioFileTypes}
+                    itemName = 'fileextension'
+                    itemRenderer = Neos.Fusion:Loop {
+                        items = ${props.assets}
+                        itemRenderer = Jonnitto.PrettyEmbedAudio:Component.Source {
+                            asset = ${item}
+                            fileextension = ${fileextension}
+                        }
+                    }
+                }
+                external = Neos.Fusion:Loop {
+                    items = Neos.Fusion:DataStructure {
+                        mp3 = ${Type.isString(props.externalMp3) ? String.trim(props.externalMp3) : null}
+                        wave = ${Type.isString(props.externalWave) ? String.trim(props.externalWave) : null}
+                        ogg = ${Type.isString(props.externalOgg) ? String.trim(props.externalOgg) : null}
+                        @process.filter = ${Carbon.Array.filter(value)}
+                    }
+                    itemKey = 'fileextension'
+                    itemRenderer = Neos.Fusion:Loop {
+                        // Split by line break
+                        items = ${String.pregSplit(item, '/\r?\n/')}
+                        itemRenderer = Jonnitto.PrettyEmbedAudio:Component.Source {
+                            uri = ${String.trim(item)}
+                            fileextension = ${fileextension}
+                        }
+                    }
+                }
+                sources = ${props.hasExternalSwitch ? (props.external ? this.external : this.assets) : this.assets + this.external}
+            }
+        }
+
+        renderer = Neos.Fusion:Case {
+            noAudio {
+                condition = ${!props.sources}
+                renderer = afx`<Jonnitto.PrettyEmbedHelper:Notification key='noAudio' default='Please add an audio file or url in the inspector' />`
+            }
+            default {
+                condition = true
+                renderer = afx`
+                    <Jonnitto.PrettyEmbedAudio:Component.Audio {...props} />
+                `
+            }
+        }
+    }
+}

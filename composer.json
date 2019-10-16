@@ -1,0 +1,40 @@
+{
+    "name": "jonnitto/prettyembedaudio",
+    "type": "neos-plugin",
+    "license": "GPL-3.0-or-later",
+    "description": "Prettier embeds for your audio files in Neos CMS.",
+    "keywords": [
+        "flow",
+        "neos",
+        "audio",
+        "contentelement"
+    ],
+    "support": {
+        "issues": "https://github.com/jonnitto/Jonnitto.PrettyEmbedAudio/issues",
+        "source": "https://github.com/jonnitto/Jonnitto.PrettyEmbedAudio"
+    },
+    "homepage": "https://github.com/jonnitto/Jonnitto.PrettyEmbedAudio",
+    "authors": [
+        {
+            "name": "Markus Günther",
+            "email": "info@unikka.de",
+            "homepage": "https://unikka.de",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "jonnitto/prettyembedhelper": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jonnitto\\PrettyEmbedAudio\\": "Classes"
+        }
+    },
+    "archive": {
+        "exclude": [
+            ".gitattributes",
+            ".github",
+            "CODE_OF_CONDUCT.md"
+        ]
+    }
+}
