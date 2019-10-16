@@ -3,7 +3,6 @@ prototype(Jonnitto.PrettyEmbedAudio:Component.Audio) < prototype(Neos.Fusion:Com
 
     controls = ${this.configuration.defaults.controls}
     loop = ${this.configuration.defaults.loop}
-    muted = ${this.configuration.defaults.muted}
     preload = ${this.configuration.defaults.preload}
     playsinline = ${this.configuration.defaults.playsinline}
     crossorigin = ${this.configuration.defaults.crossorigin}
