@@ -12,4 +12,4 @@
   ui:
     label: Audio
     icon: 'fas fa-microphone'
-    position: 920
+    position: 950
