@@ -21,6 +21,8 @@
           group: audio
           position: 40
           editor: Neos.Neos/Inspector/Editors/CodeEditor
+          editorOptions:
+            highlightingMode: 'text/plain'
     externalOgg:
       type: string
       ui:
@@ -30,3 +32,5 @@
           group: audio
           position: 50
           editor: Neos.Neos/Inspector/Editors/CodeEditor
+          editorOptions:
+            highlightingMode: 'text/plain'
