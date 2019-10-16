@@ -13,11 +13,6 @@
 
 Prettier embeds for your Audio sources in [Neos CMS](https://www.neos.io)
 
-| Version | Neos          |
-| ------- | ------------- |
-| 1.\*    | 3.3.\* + 4.\* |
-| 2.\*    | ^4.2.\*       |
-
 ## Installation
 
 Most of the time you have to make small adjustments to a package (e.g. configuration in `Settings.yaml`). Because of that, it is important to add the corresponding package to the composer from your theme package. Mostly this is the site packages located under `Packages/Sites/`. To install it correctly go to your theme package (e.g.`Packages/Sites/Foo.Bar`) and run following command:
@@ -55,9 +50,9 @@ All packages from the PrettyEmbed series have the benefit of a better frontend p
 If you want to customize the default settings, take a look at the [Settings.Jonnitto.yaml](Configuration/Settings.Jonnitto.yaml#6) file. If no node property is giving, these default values will be taken. If you, for example, don't want to let the editor choose if the video should open in a lightbox you can deactivate the mixin in your Configuration folder like this:
 
 ```yaml
-"Jonnitto.PrettyEmbedAudio:Content.Vimeo":
+"Jonnitto.PrettyEmbedAudio:Content.Audio":
   superTypes:
-    "Jonnitto.PrettyEmbedHelper:Mixin.Groups": true
+    "Jonnitto.PrettyEmbedHelper:Mixin.Loop": true
 ```
 
 These are the available mixins:
@@ -66,7 +61,6 @@ These are the available mixins:
 | -------------------------------------------------- | --------------------------------------------------------------------- | :-----: |
 | `Jonnitto.PrettyEmbedHelper:Mixin.Groups`          | Enables the inspector groups                                          |    ✓    |
 | `Jonnitto.PrettyEmbedHelper:Mixin.IncludeAssets`   | Include the frontend resources                                        |    ✓    |
-| `Jonnitto.PrettyEmbedHelper:Mixin.Muted`           | Whether the audio is muted upon loading, defaults to `false`          |         |
 | `Jonnitto.PrettyEmbedHelper:Mixin.Loop`            | Loop the audio, defaults to `false`                                   |         |
 
 If you want to give the editor even more control, you can also add your own properties like `color`, for example. For a full list look at the `defaults` section in the [Settings.Jonnitto.yaml](Configuration/Settings.Jonnitto.yaml#6) file.
