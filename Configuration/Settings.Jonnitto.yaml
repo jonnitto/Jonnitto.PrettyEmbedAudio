@@ -9,9 +9,6 @@ Jonnitto:
       # to the start upon reaching the end of the audio.
       loop: false
 
-      # Whether the audio is muted upon loading. Set automatically to true if autoplay is enabled
-      muted: false
-
       # This enumerated attribute is intended to provide a hint to the browser about what
       # the author thinks will lead to the best user experience with regards to what content
       # is loaded before the audio is played. It may have one of the following values:
