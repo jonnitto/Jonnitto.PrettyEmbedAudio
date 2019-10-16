@@ -6,7 +6,7 @@
     'Jonnitto.PrettyEmbedAudio:Mixin.Sources': true
 
     # If you want to give the editor more control,
-    # you can also add also these mixins:
+    # you can also add also this mixin:
 
     # 'Jonnitto.PrettyEmbedHelper:Mixin.Loop': true
   ui:
