@@ -25,5 +25,5 @@ Jonnitto:
       playsinline: true
 
       # https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio#attr-crossorigin
-      # anonymous || use-credentials || true
+      # anonymous || use-credentials || true || false
       crossorigin: false
