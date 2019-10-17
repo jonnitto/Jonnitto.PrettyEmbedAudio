@@ -63,10 +63,9 @@ These are the available mixins:
 | `Jonnitto.PrettyEmbedHelper:Mixin.IncludeAssets`   | Include the frontend resources                                        |    ✓    |
 | `Jonnitto.PrettyEmbedHelper:Mixin.Loop`            | Loop the audio, defaults to `false`                                   |         |
 
-If you want to give the editor even more control, you can also add your own properties like `color`, for example. For a full list look at the `defaults` section in the [Settings.Jonnitto.yaml](Configuration/Settings.Jonnitto.yaml#6) file.
 
 ### Fusion
 
-If you want to use the player as a pure component, you can use the [`Jonnitto.PrettyEmbedAudio:Component.Audio`](Resources/Private/Fusion/Component/Audio.fusion) fusion prototype.
+If you want to use the player as a pure component, you can use the [`Jonnitto.PrettyEmbedAudio:Component.Audio`](Resources/Private/Fusion/Component/Audio.fusion) Fusion prototype.
 
 If you want to read the node properties and let the package handle all for you, you should use the [`Jonnitto.PrettyEmbedAudio:Content.Audio`](Resources/Private/Fusion/Content/Audio.fusion) prototype. For easier including in your own node types, you can disable the content element wrapping with `contentElement = false`. This is useful if you want to create for example a text with audio node type.
