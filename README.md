@@ -1,6 +1,6 @@
 [![Latest Stable Version](https://poser.pugx.org/jonnitto/prettyembedaudio/v/stable)](https://packagist.org/packages/jonnitto/prettyembedaudio)
-[![Total Downloads](https://poser.pugx.org/jonnitto/prettyembedaudio/downloads)](https://packagist.org/packages/jonnitto/prettyembedvimeo)
-[![License](https://poser.pugx.org/jonnitto/prettyembedaudio/license)](https://packagist.org/packages/jonnitto/prettyembedvimeo)
+[![Total Downloads](https://poser.pugx.org/jonnitto/prettyembedaudio/downloads)](https://packagist.org/packages/jonnitto/prettyembedaudio)
+[![License](https://poser.pugx.org/jonnitto/prettyembedaudio/license)](https://packagist.org/packages/jonnitto/prettyembedaudio)
 [![GitHub forks](https://img.shields.io/github/forks/jonnitto/Jonnitto.PrettyEmbedAudio.svg?style=social&label=Fork)](https://github.com/jonnitto/Jonnitto.PrettyEmbedAudio/fork)
 [![Support development](https://img.shields.io/badge/Donate-PayPal-yellow.svg)](https://www.paypal.me/Jonnitto/20eur)
 [![My wishlist on amazon](https://img.shields.io/badge/Wishlist-Amazon-yellow.svg)](https://www.amazon.de/hz/wishlist/ls/2WPGORAVYF39B?&sort=default)  
