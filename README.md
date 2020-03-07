@@ -1,17 +1,8 @@
-[![Latest Stable Version](https://poser.pugx.org/jonnitto/prettyembedaudio/v/stable)](https://packagist.org/packages/jonnitto/prettyembedaudio)
-[![Total Downloads](https://poser.pugx.org/jonnitto/prettyembedaudio/downloads)](https://packagist.org/packages/jonnitto/prettyembedaudio)
-[![License](https://poser.pugx.org/jonnitto/prettyembedaudio/license)](https://packagist.org/packages/jonnitto/prettyembedaudio)
-[![GitHub forks](https://img.shields.io/github/forks/jonnitto/Jonnitto.PrettyEmbedAudio.svg?style=social&label=Fork)](https://github.com/jonnitto/Jonnitto.PrettyEmbedAudio/fork)
-[![Support development](https://img.shields.io/badge/Donate-PayPal-yellow.svg)](https://www.paypal.me/Jonnitto/20eur)
-[![My wishlist on amazon](https://img.shields.io/badge/Wishlist-Amazon-yellow.svg)](https://www.amazon.de/hz/wishlist/ls/2WPGORAVYF39B?&sort=default)  
-[![GitHub stars](https://img.shields.io/github/stars/jonnitto/Jonnitto.PrettyEmbedAudio.svg?style=social&label=Stars)](https://github.com/jonnitto/Jonnitto.PrettyEmbedAudio/stargazers)
-[![GitHub watchers](https://img.shields.io/github/watchers/jonnitto/Jonnitto.PrettyEmbedAudio.svg?style=social&label=Watch)](https://github.com/jonnitto/Jonnitto.PrettyEmbedAudio/subscription)
-[![GitHub followers](https://img.shields.io/github/followers/jonnitto.svg?style=social&label=Follow)](https://github.com/jonnitto/followers)
-[![Follow Jon on Twitter](https://img.shields.io/twitter/follow/jonnitto.svg?style=social&label=Follow)](https://twitter.com/jonnitto)
+[![Latest stable version]][packagist] [![Total downloads]][packagist] [![License]][packagist] [![GitHub forks]][fork] [![GitHub stars]][stargazers] [![GitHub watchers]][subscription] [![GitHub followers]][followers] [![Follow Jon on Twitter]][twitter]
 
 # Jonnitto.PrettyEmbedAudio
 
-Prettier embeds for your Audio sources in [Neos CMS](https://www.neos.io)
+Prettier embeds for your Audio sources in [Neos CMS]
 
 ## Installation
 
@@ -25,7 +16,7 @@ The `--no-update` command prevent the automatic update of the dependencies. Afte
 
 ## FAQ
 
-**What are the differences from the PrettyEmbed series to [Jonnitto.Plyr](https://github.com/jonnitto/Jonnitto.Plyr)?**
+**What are the differences from the PrettyEmbed series to [Jonnitto.Plyr]?**
 
 |                                    | PrettyEmbed series |  Plyr  |
 | ---------------------------------- | :----------------: | :----: |
@@ -47,25 +38,45 @@ All packages from the PrettyEmbed series have the benefit of a better frontend p
 
 ### Configuration
 
-If you want to customize the default settings, take a look at the [Settings.Jonnitto.yaml](Configuration/Settings.Jonnitto.yaml#6) file. If no node property is giving, these default values will be taken. If you, for example, don't want to let the editor choose if the video should open in a lightbox you can deactivate the mixin in your Configuration folder like this:
+If you want to customize the default settings, take a look at the [Settings.Jonnitto.yaml] file. If no node property is giving, these default values will be taken. If you, for example, don't want to let the editor choose if the video should open in a lightbox you can deactivate the mixin in your Configuration folder like this:
 
 ```yaml
-"Jonnitto.PrettyEmbedAudio:Content.Audio":
+'Jonnitto.PrettyEmbedAudio:Content.Audio':
   superTypes:
-    "Jonnitto.PrettyEmbedHelper:Mixin.Loop": true
+    'Jonnitto.PrettyEmbedHelper:Mixin.Loop': true
 ```
 
 These are the available mixins:
 
-| Mixin name                                         | Description                                                           | Enabled |
-| -------------------------------------------------- | --------------------------------------------------------------------- | :-----: |
-| `Jonnitto.PrettyEmbedHelper:Mixin.Groups`          | Enables the inspector groups                                          |    ✓    |
-| `Jonnitto.PrettyEmbedHelper:Mixin.IncludeAssets`   | Include the frontend resources                                        |    ✓    |
-| `Jonnitto.PrettyEmbedHelper:Mixin.Loop`            | Loop the audio, defaults to `false`                                   |         |
-
+| Mixin name                                       | Description                         | Enabled |
+| ------------------------------------------------ | ----------------------------------- | :-----: |
+| `Jonnitto.PrettyEmbedHelper:Mixin.Groups`        | Enables the inspector groups        |    ✓    |
+| `Jonnitto.PrettyEmbedHelper:Mixin.IncludeAssets` | Include the frontend resources      |    ✓    |
+| `Jonnitto.PrettyEmbedHelper:Mixin.Loop`          | Loop the audio, defaults to `false` |         |
 
 ### Fusion
 
-If you want to use the player as a pure component, you can use the [`Jonnitto.PrettyEmbedAudio:Component.Audio`](Resources/Private/Fusion/Component/Audio.fusion) Fusion prototype.
+If you want to use the player as a pure component, you can use the [`Jonnitto.PrettyEmbedAudio:Component.Audio`] Fusion prototype.
 
-If you want to read the node properties and let the package handle all for you, you should use the [`Jonnitto.PrettyEmbedAudio:Content.Audio`](Resources/Private/Fusion/Content/Audio.fusion) prototype. For easier including in your own node types, you can disable the content element wrapping with `contentElement = false`. This is useful if you want to create for example a text with audio node type.
+If you want to read the node properties and let the package handle all for you, you should use the [`Jonnitto.PrettyEmbedAudio:Content.Audio`] prototype. For easier including in your own node types, you can disable the content element wrapping with `contentElement = false`. This is useful if you want to create for example a text with audio node type.
+
+[packagist]: https://packagist.org/packages/jonnitto/prettyembedaudio
+[latest stable version]: https://poser.pugx.org/jonnitto/prettyembedaudio/v/stable
+[total downloads]: https://poser.pugx.org/jonnitto/prettyembedaudio/downloads
+[license]: https://poser.pugx.org/jonnitto/prettyembedaudio/license
+[github forks]: https://img.shields.io/github/forks/jonnitto/Jonnitto.PrettyEmbedAudio.svg?style=social&label=Fork
+[github stars]: https://img.shields.io/github/stars/jonnitto/Jonnitto.PrettyEmbedAudio.svg?style=social&label=Stars
+[github watchers]: https://img.shields.io/github/watchers/jonnitto/Jonnitto.PrettyEmbedAudio.svg?style=social&label=Watch
+[github followers]: https://img.shields.io/github/followers/jonnitto.svg?style=social&label=Follow
+[follow jon on twitter]: https://img.shields.io/twitter/follow/jonnitto.svg?style=social&label=Follow
+[twitter]: https://twitter.com/jonnitto
+[fork]: https://github.com/jonnitto/Jonnitto.PrettyEmbedAudio/fork
+[stargazers]: https://github.com/jonnitto/Jonnitto.PrettyEmbedAudio/stargazers
+[subscription]: https://github.com/jonnitto/Jonnitto.PrettyEmbedAudio/subscription
+[followers]: https://github.com/jonnitto/followers
+[license]: LICENSE
+[neos cms]: https://www.neos.io
+[jonnitto.plyr]: https://github.com/jonnitto/Jonnitto.Plyr
+[settings.jonnitto.yaml]: Configuration/Settings.Jonnitto.yaml
+[`jonnitto.prettyembedaudio:component.audio`]: Resources/Private/Fusion/Component/Audio.fusion
+[`jonnitto.prettyembedaudio:content.audio`]: Resources/Private/Fusion/Content/Audio.fusion
