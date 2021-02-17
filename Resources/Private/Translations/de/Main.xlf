@@ -7,6 +7,10 @@
                 <source>You need to define at least one audio source.</source>
                 <target>Es muss mindestens eine Audio Quelle definiert werden.</target>
             </trans-unit>
+            <trans-unit id="lang" xml:space="preserve">
+                <source>en</source>
+                <target>de</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

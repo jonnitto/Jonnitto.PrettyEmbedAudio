@@ -7,6 +7,10 @@
                 <source>You need to define at least one audio source.</source>
                 <target>Mindst en lydkilde skal defineres.</target>
             </trans-unit>
+            <trans-unit id="lang" xml:space="preserve">
+                <source>en</source>
+                <target>da</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
