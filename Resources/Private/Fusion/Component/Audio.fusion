@@ -6,6 +6,8 @@ prototype(Jonnitto.PrettyEmbedAudio:Component.Audio) < prototype(Neos.Fusion:Com
     preload = ${this.configuration.defaults.preload}
     playsinline = ${this.configuration.defaults.playsinline}
     crossorigin = ${this.configuration.defaults.crossorigin}
+    class = null
+    audioClass = null
 
     wrapper = ${Configuration.setting('Jonnitto.PrettyEmbedHelper.wrapper')}
 
@@ -16,7 +18,7 @@ prototype(Jonnitto.PrettyEmbedAudio:Component.Audio) < prototype(Neos.Fusion:Com
     content = ${this.sources}
 
     renderer = afx`
-        <div class={BEM.modifier('jonnitto-prettyembed', 'audio')}>
+        <div class={[BEM.modifier('jonnitto-prettyembed', 'audio'), props.class]}>
             <audio
                 id={props.id}
                 controls={props.controls}
@@ -24,6 +26,7 @@ prototype(Jonnitto.PrettyEmbedAudio:Component.Audio) < prototype(Neos.Fusion:Com
                 preload={props.preload}
                 playsinline={props.playsinline}
                 crossorigin={props.crossorigin}
+                class={props.audioClass}
             >
                 {props.content}
             </audio>
