@@ -8,6 +8,7 @@ prototype(Jonnitto.PrettyEmbedAudio:Component.Audio) < prototype(Neos.Fusion:Com
     crossorigin = ${this.configuration.defaults.crossorigin}
     class = null
     audioClass = null
+    disableAudioPlayer = null
 
     wrapper = ${Configuration.setting('Jonnitto.PrettyEmbedHelper.wrapper')}
 
@@ -27,6 +28,7 @@ prototype(Jonnitto.PrettyEmbedAudio:Component.Audio) < prototype(Neos.Fusion:Com
                 playsinline={props.playsinline}
                 crossorigin={props.crossorigin}
                 class={props.audioClass}
+                style={props.disableAudioPlayer ? 'pointer-events:none' : null}
             >
                 {props.content}
             </audio>
