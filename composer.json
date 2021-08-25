@@ -23,13 +23,13 @@
         },
         {
             "name": "Jon Uhlmann",
-            "email": "me@jonnitto.ch",
-            "homepage": "https://jonnitto.ch",
+            "email": "hello@uhlmann.pro",
+            "homepage": "https://www.uhlmann.pro",
             "role": "Developer"
         }
     ],
     "require": {
-        "jonnitto/prettyembedhelper": "^2.8 || dev-master"
+        "jonnitto/prettyembedhelper": "^2.8 || ^3.0 || dev-master"
     },
     "autoload": {
         "psr-4": {
