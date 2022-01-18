@@ -59,7 +59,7 @@ prototype(Jonnitto.PrettyEmbedAudio:Content.Audio) < prototype(Jonnitto.PrettyEm
                         mp3 = ${Type.isString(props.externalMp3) ? String.trim(props.externalMp3) : null}
                         wave = ${Type.isString(props.externalWave) ? String.trim(props.externalWave) : null}
                         ogg = ${Type.isString(props.externalOgg) ? String.trim(props.externalOgg) : null}
-                        @process.filter = ${Carbon.Array.filter(value)}
+                        @process.filter = ${Array.filter(value)}
                     }
                     itemKey = 'fileextension'
                     itemRenderer = Neos.Fusion:Loop {
