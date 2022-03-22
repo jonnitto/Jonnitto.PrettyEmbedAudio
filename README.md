@@ -51,7 +51,6 @@ These are the available mixins:
 | Mixin name                                       | Description                         | Enabled |
 | ------------------------------------------------ | ----------------------------------- | :-----: |
 | `Jonnitto.PrettyEmbedHelper:Mixin.Groups`        | Enables the inspector groups        |    ✓    |
-| `Jonnitto.PrettyEmbedHelper:Mixin.IncludeAssets` | Include the frontend resources      |    ✓    |
 | `Jonnitto.PrettyEmbedHelper:Mixin.Loop`          | Loop the audio, defaults to `false` |         |
 
 ### Fusion
