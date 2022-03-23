@@ -6,8 +6,8 @@ Prettier embeds for your Audio sources in [Neos CMS]
 
 | Version | Neos   | Maintained |
 | ------- | ------ | :--------: |
-| 1.\*    | > 5.\3 |      ✓     |
-| 2.\*    | > 5.\3 |      ✓     |
+| 1.\*    | >= 5.3 |      ✓     |
+| 2.\*    | >= 5.3 |      ✓     |
 
 ## Installation
 
