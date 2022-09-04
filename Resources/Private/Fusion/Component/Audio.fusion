@@ -6,15 +6,15 @@ prototype(Jonnitto.PrettyEmbedAudio:Component.Audio) < prototype(Neos.Fusion:Com
     preload = ${this.configuration.defaults.preload}
     playsinline = ${this.configuration.defaults.playsinline}
     crossorigin = ${this.configuration.defaults.crossorigin}
-    class = null
-    audioClass = null
-    disableAudioPlayer = null
+    class = ${null}
+    audioClass = ${null}
+    disableAudioPlayer = ${null}
 
     wrapper = ${Configuration.setting('Jonnitto.PrettyEmbedHelper.wrapper')}
 
-    id = null
+    id = ${null}
 
-    sources = null
+    sources = ${null}
 
     content = ${this.sources}
 
