@@ -78,7 +78,7 @@ prototype(Jonnitto.PrettyEmbedAudio:Content.Audio) < prototype(Jonnitto.PrettyEm
         renderer = Neos.Fusion:Case {
             noAudio {
                 condition = ${!props.sources}
-                renderer = afx`<Jonnitto.PrettyEmbedHelper:Notification key='noAudio' default='Please add an audio file or url in the inspector' />`
+                renderer = afx`<Jonnitto.PrettyEmbedHelper:Notification key='noAudio' default='Please add an audio file or url in the inspector' class={props.class} />`
             }
             default {
                 condition = true
