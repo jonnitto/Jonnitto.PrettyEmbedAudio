@@ -19,8 +19,8 @@ prototype(Jonnitto.PrettyEmbedAudio:Component.Audio) < prototype(Neos.Fusion:Com
     content = ${this.sources}
 
     renderer = afx`
-        <Jonnitto.PrettyEmbedHelper:Assets />
         <div class={[BEM.modifier('jonnitto-prettyembed', 'audio'), props.class]}>
+            <Jonnitto.PrettyEmbedHelper:Assets />
             <audio
                 id={props.id}
                 controls={props.controls}
