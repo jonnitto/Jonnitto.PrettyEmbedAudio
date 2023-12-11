@@ -1,7 +1,16 @@
-prototype(Jonnitto.PrettyEmbedAudio:Content.Audio) < prototype(Jonnitto.PrettyEmbedHelper:Content) {
-    package = 'Audio'
-    audioFileTypes = ${['mp3', 'wave', 'ogg']}
+prototype(Jonnitto.PrettyEmbedAudio:Content.Audio) < prototype(Jonnitto.PrettyEmbed:Content) {
+    @propTypes {
+        // These properties are already defined in Jonnitto.PrettyEmbed:Content
+        wrapper = ${PropTypes.anyOf(PropTypes.string, PropTypes.boolean)}
 
+        class = ${PropTypes.anyOf( PropTypes.string, PropTypes.arrayOf( PropTypes.string ) )}
+    }
+
+    label = null
+    id = null
+    player = 'Audio'
+
+    audioFileTypes = ${['mp3', 'wave', 'ogg']}
     assets = ${q(node).property('assets')}
     hasExternalSwitch = ${q(node).is('[instanceof Jonnitto.PrettyEmbedAudio:Mixin.Sources]')}
     external = ${q(node).property('external')}
@@ -17,24 +26,24 @@ prototype(Jonnitto.PrettyEmbedAudio:Content.Audio) < prototype(Jonnitto.PrettyEm
     #  - none       Indicates that the video should not be preloaded.
     #  - metadata   Indicates that only video metadata (e.g. length) is fetched.
     #  - auto       Indicates that the whole video file can be downloaded, even if the user is not expected to use it
-    preload = Jonnitto.PrettyEmbedHelper:GetProperty {
+    preload = Jonnitto.PrettyEmbed:GetProperty {
         property = 'preload'
     }
 
     # https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio#attr-crossorigin
-    crossorigin = Jonnitto.PrettyEmbedHelper:GetProperty {
+    crossorigin = Jonnitto.PrettyEmbed:GetProperty {
         property = 'crossorigin'
     }
 
     # If true, the browser will offer controls to allow the user to control
     # audio playback, including volume, seeking, and pause/resume playback.
-    controls = Jonnitto.PrettyEmbedHelper:GetProperty {
+    controls = Jonnitto.PrettyEmbed:GetProperty {
         property = 'controls'
     }
 
     # If true, the browser will automatically seek back
     # to the start upon reaching the end of the audio.
-    loop = Jonnitto.PrettyEmbedHelper:GetProperty {
+    loop = Jonnitto.PrettyEmbed:GetProperty {
         property = 'loop'
     }
 
@@ -47,7 +56,8 @@ prototype(Jonnitto.PrettyEmbedAudio:Content.Audio) < prototype(Jonnitto.PrettyEm
                     itemName = 'fileextension'
                     itemRenderer = Neos.Fusion:Loop {
                         items = ${props.assets}
-                        itemRenderer = Jonnitto.PrettyEmbedAudio:Component.Source {
+                        itemRenderer = Jonnitto.PrettyEmbed:Presentation.Source {
+                            type = 'audio'
                             asset = ${item}
                             fileextension = ${fileextension}
                         }
@@ -65,7 +75,8 @@ prototype(Jonnitto.PrettyEmbedAudio:Content.Audio) < prototype(Jonnitto.PrettyEm
                     itemRenderer = Neos.Fusion:Loop {
                         // Split by line break
                         items = ${String.pregSplit(item, '/\r?\n/')}
-                        itemRenderer = Jonnitto.PrettyEmbedAudio:Component.Source {
+                        itemRenderer = Jonnitto.PrettyEmbed:Presentation.Source {
+                            type = 'audio'
                             uri = ${String.trim(item)}
                             fileextension = ${fileextension}
                         }
@@ -78,11 +89,24 @@ prototype(Jonnitto.PrettyEmbedAudio:Content.Audio) < prototype(Jonnitto.PrettyEm
         renderer = Neos.Fusion:Case {
             noAudio {
                 condition = ${!props.sources}
-                renderer = afx`<Jonnitto.PrettyEmbedHelper:Notification key='noAudio' default='Please add an audio file or url in the inspector' class={props.class} />`
+                renderer = Jonnitto.PrettyEmbed:Notification {
+                    key = 'noAudio'
+                    default = 'Please add an audio file or url in the inspector'
+                    class = ${props.class}
+                }
             }
             default {
                 condition = true
-                renderer = afx`<Jonnitto.PrettyEmbedAudio:Component.Audio {...props} />`
+                renderer = Jonnitto.PrettyEmbed:Presentation.Audio {
+                    wrapper = ${props.wrapper}
+                    label = ${props.label}
+                    id = ${props.id}
+                    controls = ${props.controls}
+                    loop = ${props.loop}
+                    preload = ${props.preload}
+                    crossorigin = ${props.crossorigin}
+                    content = ${props.sources}
+                }
             }
         }
     }
