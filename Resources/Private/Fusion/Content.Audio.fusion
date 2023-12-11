@@ -2,12 +2,14 @@ prototype(Jonnitto.PrettyEmbedAudio:Content.Audio) < prototype(Jonnitto.PrettyEm
     @propTypes {
         // These properties are already defined in Jonnitto.PrettyEmbed:Content
         wrapper = ${PropTypes.anyOf(PropTypes.string, PropTypes.boolean)}
-
+        label = ${PropTypes.string}
+        id = ${PropTypes.string}
         class = ${PropTypes.anyOf( PropTypes.string, PropTypes.arrayOf( PropTypes.string ) )}
+        metadata = ${PropTypes.shape({
+            'duration': PropTypes.integer
+        })}
     }
 
-    label = null
-    id = null
     player = 'Audio'
 
     audioFileTypes = ${['mp3', 'wave', 'ogg']}
