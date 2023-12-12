@@ -89,6 +89,11 @@ prototype(Jonnitto.PrettyEmbedAudio:Content.Audio) < prototype(Jonnitto.PrettyEm
         }
 
         renderer = Neos.Fusion:Case {
+            @process.debug = Neos.Fusion:Debug.Console {
+                @if.debug = ${props.debug}
+                package = 'PrettyEmbedAudio'
+                props = ${props}
+            }
             noAudio {
                 condition = ${!props.sources}
                 renderer = Jonnitto.PrettyEmbed:Notification {
