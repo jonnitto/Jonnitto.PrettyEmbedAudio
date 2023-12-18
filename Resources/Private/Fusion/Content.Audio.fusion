@@ -107,6 +107,7 @@ prototype(Jonnitto.PrettyEmbedAudio:Content.Audio) < prototype(Jonnitto.PrettyEm
                 condition = true
                 renderer = Jonnitto.PrettyEmbed:Presentation.Audio {
                     wrapper = ${props.wrapper}
+                    class = ${props.class}
                     label = ${props.label}
                     id = ${props.id}
                     controls = ${props.controls}
