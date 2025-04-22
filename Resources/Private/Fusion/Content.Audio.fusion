@@ -21,7 +21,7 @@ prototype(Jonnitto.PrettyEmbedAudio:Content.Audio) < prototype(Jonnitto.PrettyEm
     externalWave = ${q(node).property('externalWave')}
     externalOgg = ${q(node).property('externalOgg')}
 
-    disableAudioPlayer = ${node.context.inBackend}
+    disableAudioPlayer = ${this.inBackend}
 
     # This enumerated attribute is intended to provide a hint to the browser about what
     # the author thinks will lead to the best user experience with regards to what content
