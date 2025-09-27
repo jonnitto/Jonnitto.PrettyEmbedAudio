@@ -3,6 +3,7 @@
     'Neos.Neos:Content': true
     'Jonnitto.PrettyEmbedHelper:Mixin.Groups': true
     'Jonnitto.PrettyEmbedAudio:Mixin.Sources': true
+    'Jonnitto.PrettyEmbedHelper:Mixin.BackendLabel': true
 
     # If you want to give the editor more control,
     # you can also add also this mixin:
