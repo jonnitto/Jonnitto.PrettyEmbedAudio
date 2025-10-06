@@ -17,5 +17,6 @@
             constraints:
               mediaTypes:
                 - 'audio/mp3'
+                - 'audio/mpeg'
                 - 'audio/wave'
                 - 'audio/ogg'
