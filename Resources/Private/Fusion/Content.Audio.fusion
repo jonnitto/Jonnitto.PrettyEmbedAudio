@@ -99,6 +99,7 @@ prototype(Jonnitto.PrettyEmbedAudio:Content.Audio) < prototype(Jonnitto.PrettyEm
             }
         }
         default {
+            @position = 'end'
             condition = true
             renderer = Jonnitto.PrettyEmbed:Presentation.Audio {
                 wrapper = ${props.wrapper}
