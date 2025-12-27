@@ -7,7 +7,7 @@
                 <source>Internal audio sources</source>
             </trans-unit>
             <trans-unit id="properties.assets.ui.help.message" xml:space="preserve">
-                <source>The asssets must be `.mp3`, `.wave` or `.ogg` files. Other filetypes will be ignored.</source>
+                <source>The assets must be `.mp3`, `.wave` or `.ogg` files. Other filetypes will be ignored.</source>
             </trans-unit>
         </body>
     </file>

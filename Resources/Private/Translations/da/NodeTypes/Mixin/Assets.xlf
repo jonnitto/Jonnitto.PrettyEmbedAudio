@@ -8,7 +8,7 @@
                 <target>Interne lydkilder</target>
             </trans-unit>
             <trans-unit id="properties.assets.ui.help.message" xml:space="preserve">
-                <source>The asssets must be `.mp3`, `.wave` or `.ogg` files. Other filetypes will be ignored.</source>
+                <source>The assets must be `.mp3`, `.wave` or `.ogg` files. Other filetypes will be ignored.</source>
                 <target>Assetsets skal være filer ".mp3", ".wave" eller ".ogg". Andre filtyper ignoreres.</target>
             </trans-unit>
         </body>
