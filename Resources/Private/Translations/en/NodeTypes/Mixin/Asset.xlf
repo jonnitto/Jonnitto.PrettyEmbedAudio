@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2"
+    xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="Jonnitto.PrettyEmbedAudio" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="properties.asset" xml:space="preserve">
+                <source>Audio file</source>
+            </trans-unit>
+            <trans-unit id="properties.asset.ui.help.message" xml:space="preserve">
+                <source>The asset must be `.mp3`, `.wave` or `.ogg` file. Other filetypes will be ignored.</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
